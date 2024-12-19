@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/socks_warehouse
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
+    com.example: DEBUG
+
+server:
+  port: 8080
